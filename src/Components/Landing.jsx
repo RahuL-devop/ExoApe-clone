@@ -43,27 +43,27 @@ const Landing = () => {
                 );
               })}
             </div>
-            <div className="Landing__heading mt-5 overflow-hidden md:leading-none">
+            <div className="Landing__heading mt-2  md:leading-none ">
               {["Digital", "Design", "Experience"].map((item, index) => {
                 return (
                   <motion.h1
-                    initial={{ opacity: 0, y: 140 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 130 }}
+                    animate={{ opacity: 1, y: 2 }}
                     transition={{
                       duration: 1.5,
                       delay: index * 0.1,
                       stiffness: 0,
                       damping: 0,
                     }}
-                    className="overflow-hidden text-6xl leading-none tracking-tighter md:mb-[-4vw] md:text-[19vw]  md:leading-none"
+                    className=" text-6xl leading-none tracking-tighter md:mb-[-2.4vw]  md:text-[16vw]   md:leading-none"
                   >
-                    <span className="inline-block">{item}</span>
+                    <span className="inline-block ">{item}</span>
                   </motion.h1>
                 );
               })}
             </div>
             <div className="Landing__para2">
-              <p className="md:mt-22 mt-5 text-sm md:w-1/3 md:text-2xl">
+              <p className="md:mt-22 mt-20 text-sm md:w-1/3 md:text-2xl">
                 We help experience-driven companies thrive by making their
                 audience feel the refined intricacies of their brand and product
                 in the digital space. Unforgettable journeys start with a click.
