@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -10,3 +11,6 @@ Currently, two official plugins are available:
 =======
 # Exoape-clone
 >>>>>>> ec7a7a1992ee772353608441698bd75a3d19b630
+=======
+# ExoApe-clone
+>>>>>>> 0de2169e1175826062664ae01d6e7cc977c465b8
