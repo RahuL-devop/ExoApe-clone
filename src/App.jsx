@@ -11,13 +11,12 @@ import {
   Footer,
 } from "./Components";
 
-
 const App = () => {
   const locomotiveScroll = new LocomotiveScroll();
 
   return (
     <>
-      <div className="Main w-full ">
+      <div className="Main w-full overflow-x-hidden">
         <Navbar />
         <Landing />
         <Work />

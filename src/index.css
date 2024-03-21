@@ -11,3 +11,7 @@
 .video-no-outline {
   outline: none;
 }
+
+::-webkit-scrollbar{
+  display: none;
+}
