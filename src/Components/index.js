@@ -5,5 +5,6 @@ export { default as Landing } from "./Landing";
 export { default as PlayReel } from "./PlayReel";
 export { default as Work } from "./Work";
 export { default as Spread } from "./Spread";
+// export { default as MouseCursor } from "./MouseCursor";
  
  

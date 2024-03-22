@@ -9,6 +9,7 @@ import {
   ImageGallery,
   Spread,
   Footer,
+  // MouseCursor,
 } from "./Components";
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
   return (
     <>
       <div className="Main w-full overflow-x-hidden">
+        {/* <MouseCursor /> */}
         <Navbar />
         <Landing />
         <Work />
