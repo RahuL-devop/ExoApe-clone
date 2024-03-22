@@ -3,7 +3,7 @@ import foot_vid from "../assets/media/foot_vid.mp4";
 
 const Footer = () => {
   return (
-    <div className="__Footer relative z-[3] min-h-screen w-full bg-[#060606] px-5 py-10 text-white md:px-10">
+    <div className="__Footer relative z-[3] h-fit w-full bg-[#060606] px-5 py-10 text-white md:px-10">
       <div className="footer__container flex items-center">
         <div className="footer__title z-[1] w-[40%]">
           <h1 className="text-6xl text-[#E0CCBB] md:text-[10vw]">Our</h1>

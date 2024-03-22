@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Landing = () => {
   return (
     <>
-      <div className="__Landing relative h-[150vh] w-full text-white md:h-[250vh]">
+      <div className="__Landing relative h-screen w-full text-white md:h-[250vh]">
         <div className=" h-full overflow-hidden">
           <img
             data-scroll
@@ -63,11 +63,20 @@ const Landing = () => {
               })}
             </div>
             <div className="Landing__para2">
-              <p className="md:mt-22 mt-20 text-sm md:w-1/3 md:text-2xl">
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 1.5,
+                 
+                   
+                }}
+                className="md:mt-22 mt-20 text-sm md:w-1/3 md:text-2xl"
+              >
                 We help experience-driven companies thrive by making their
                 audience feel the refined intricacies of their brand and product
                 in the digital space. Unforgettable journeys start with a click.
-              </p>
+              </motion.p>
               <a
                 href="#"
                 className="mt-10 inline-block border-b-[.3px] border-zinc-100/80 md:mt-14 md:border-b-[1px] md:text-xl"

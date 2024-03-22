@@ -2,7 +2,7 @@ import React from "react";
 
 const Spread = () => {
   return (
-    <div className="__Spread relative h-screen w-full py-10 ">
+    <div className="__Spread relative mt-10 md:h-screen w-full py-10 ">
       <div className="Spread__container mx-auto h-2/3 max-w-screen-2xl px-5 md:px-10">
         <div className="Spread__featured flex items-center justify-center  gap-1 ">
           <div className="starIcon w-2">

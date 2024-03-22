@@ -10,32 +10,47 @@ import img4 from "../assets/media/img4.webp";
 import { motion } from "framer-motion";
 
 const Work = () => {
+  const [play, setPlay] = useState(false);
+
   const [works, setWorks] = useState([
     {
       heading: "Studio D",
       description: "Urban and Landscape Design",
       img: img1,
       video: vid1,
+      play: false,
     },
     {
       heading: "Rino & Pelle",
       description: "Efforless Chic lifestyle",
       img: img2,
       video: vid2,
+      play: false,
     },
     {
       heading: "Abele Interiors",
       description: "Luxurious Design Experience",
       img: img3,
       video: vid3,
+      play: false,
     },
     {
       heading: "Pixleflakes",
       description: "Architectural marketing agency",
       img: img4,
       video: vid4,
+      play: false,
     },
   ]);
+
+  const handlePlay = (index) => {
+    setWorks(
+      works.map((item, i) =>
+        i === index ? { ...item, play: !item.play } : item,
+      ),
+    );
+    console.log(play);
+  };
   return (
     <div className="__Work relative min-h-screen w-full px-5 py-10 md:pt-32 ">
       <div className="mx-auto max-w-screen-2xl">
@@ -217,30 +232,37 @@ const Work = () => {
             </div>
           </div>
         </div>
-        <div className="work__featured__projects_mobileDevices md:hidden ">
+        <div className="work__featured__projects_mobileDevices block md:hidden ">
           {works.map((item, index) => {
             return (
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
                 transition={{ duration: 0.3, ease: "linear", delay: 0.3 }}
                 key={index}
                 className="work__works mt-10"
               >
-                <div className="work__media h-[108vw] overflow-hidden md:h-[40vw]">
-                  <img
-                    className="hidden h-full w-full bg-cover md:block "
-                    src={item.img}
-                    alt=""
-                  />
-                  <video
-                    className="block md:hidden md:hover:block"
-                    src={item.video}
-                    autoPlay
-                    loop
-                    muted
-                  ></video>
+                <div className="work__media h-[108vw] overflow-hidden md:h-[40vw] ">
+                  {!item.play && (
+                    <img
+                      onClick={() => {
+                        handlePlay(index);
+                      }}
+                      className="h-full w-full bg-cover md:block"
+                      src={item.img}
+                      alt=""
+                    />
+                  )}
+                  {item.play && (
+                    <video
+                      className="block md:hidden"
+                      src={item.video}
+                      controls
+                      autoPlay
+                      loop
+                      muted
+                    ></video>
+                  )}
                 </div>
                 <div className="work__projets__des mt-4">
                   <p className="">{item.heading}</p>

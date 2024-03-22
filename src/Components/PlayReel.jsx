@@ -59,6 +59,7 @@ const PlayReel = () => {
           <video
             preload="none"
             autoPlay
+            controls
             loop
             muted
             className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 scale-[0.8] "
