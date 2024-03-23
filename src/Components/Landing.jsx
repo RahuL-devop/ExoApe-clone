@@ -5,7 +5,7 @@ import { animate, motion } from "framer-motion";
 const Landing = () => {
   return (
     <>
-      <div className="__Landing relative h-screen w-full text-white md:h-[250vh]">
+      <div className="__Landing relative min-h-screen w-full text-white md:h-[250vh]">
         <div className=" h-full overflow-hidden">
           <img
             data-scroll
@@ -43,30 +43,14 @@ const Landing = () => {
                 );
               })}
             </div>
-            <div className="Landing__heading mt-  md:leading-none ">
-              {/* {["Digital", "Design", "Experience"].map((item, index) => {
-                return (
-                  <motion.h1
-                    initial={{ opacity: 0, y: 130 }}
-                    animate={{ opacity: 1, y: 2 }}
-                    transition={{
-                      duration: 1.5,
-                      delay: index * 0.1,
-                      stiffness: 0,
-                      damping: 0,
-                    }}
-                  >
-                    <span className="inline-block ">{item}</span>
-                  </motion.h1>
-                );
-              })} */}
+            <motion.div className="Landing__heading mt-5 md:leading-none">
               <h1
                 className="text-6xl leading-none tracking-tighter
               md:mb-[-2.4vw] md:text-[16vw] md:leading-none"
               >
                 Digital
               </h1>
-              <div className="marqueeContainer flex items-center whitespace-nowrap">
+              <motion.div className="marqueeContainer flex items-center whitespace-nowrap">
                 <motion.div className="marquee flex">
                   {["Design", "Design", "Design"].map((item, index) => {
                     return (
@@ -85,14 +69,14 @@ const Landing = () => {
                     );
                   })}
                 </motion.div>
-              </div>
+              </motion.div>
               <h1
                 className="text-6xl leading-none tracking-tighter
               md:mb-[-2.4vw] md:text-[16vw] md:leading-none"
               >
                 Experience
               </h1>
-            </div>
+            </motion.div>
             <div className="Landing__para2">
               <motion.p
                 initial={{ opacity: 0 }}
@@ -100,7 +84,7 @@ const Landing = () => {
                 transition={{
                   duration: 1.5,
                 }}
-                className="md:mt-22 mt-20 text-sm md:w-1/3 md:text-2xl"
+                className="md:mt-22 mt-2 w-1/2 text-sm md:w-1/3 md:text-2xl"
               >
                 We help experience-driven companies thrive by making their
                 audience feel the refined intricacies of their brand and product
