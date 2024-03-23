@@ -1,6 +1,6 @@
 import React from "react";
 import LandingImg from "../assets/media/landingImg.webp";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 
 const Landing = () => {
   return (
@@ -43,8 +43,8 @@ const Landing = () => {
                 );
               })}
             </div>
-            <div className="Landing__heading mt-2  md:leading-none ">
-              {["Digital", "Design", "Experience"].map((item, index) => {
+            <div className="Landing__heading mt-  md:leading-none ">
+              {/* {["Digital", "Design", "Experience"].map((item, index) => {
                 return (
                   <motion.h1
                     initial={{ opacity: 0, y: 130 }}
@@ -55,12 +55,43 @@ const Landing = () => {
                       stiffness: 0,
                       damping: 0,
                     }}
-                    className=" text-6xl leading-none tracking-tighter md:mb-[-2.4vw]  md:text-[16vw]   md:leading-none"
                   >
                     <span className="inline-block ">{item}</span>
                   </motion.h1>
                 );
-              })}
+              })} */}
+              <h1
+                className="text-6xl leading-none tracking-tighter
+              md:mb-[-2.4vw] md:text-[16vw] md:leading-none"
+              >
+                Digital
+              </h1>
+              <div className="marqueeContainer flex items-center whitespace-nowrap">
+                <motion.div className="marquee flex">
+                  {["Design", "Design", "Design"].map((item, index) => {
+                    return (
+                      <motion.h1
+                        initial={{ x: 0 }}
+                        animate={{ x: "-100%" }}
+                        transition={{
+                          ease: "linear",
+                          duration: 5,
+                          repeat: Infinity,
+                        }}
+                        className=" pr-[20vw] text-6xl leading-none tracking-tighter md:mb-[-2.4vw] md:text-[16vw] md:leading-none"
+                      >
+                        {item}
+                      </motion.h1>
+                    );
+                  })}
+                </motion.div>
+              </div>
+              <h1
+                className="text-6xl leading-none tracking-tighter
+              md:mb-[-2.4vw] md:text-[16vw] md:leading-none"
+              >
+                Experience
+              </h1>
             </div>
             <div className="Landing__para2">
               <motion.p
@@ -68,8 +99,6 @@ const Landing = () => {
                 animate={{ opacity: 1 }}
                 transition={{
                   duration: 1.5,
-                 
-                   
                 }}
                 className="md:mt-22 mt-20 text-sm md:w-1/3 md:text-2xl"
               >
